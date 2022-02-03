@@ -11,8 +11,8 @@
 '''
 
 class controller:
-    ''' ! @brief    Driver class implementing proportional control.
-          @details  Methods of this class set up attributes and methods
+    '''! @brief     Driver class implementing proportional control.
+        @details    Methods of this class set up attributes and methods
                     responsible for calculating the actuation value to be
                     sent to the motor for closed-loop control.
     '''
@@ -27,7 +27,8 @@ class controller:
     
     def run(self, measured, gain_share):
         '''! @brief Runs closed loop control calculation.
-             @param measured  Measured position value from encoder.
+             @param error       Difference between setpoint and measured values.
+             @param measured    Measured position value from encoder.
         '''
         self.error = float(self.setpoint) - float(measured)
         self.gain = float(gain_share.read())
@@ -40,8 +41,8 @@ class controller:
         self.setpoint = setpoint
         
     def set_gain(self, gain):
-        ''' @brief Establishes new proportional gain value.
-            @param gain  Kp value, the proportional gain.
+        '''! @brief Establishes new proportional gain value.
+             @param gain  Kp value, the proportional gain.
         '''
         self.gain = gain
     
