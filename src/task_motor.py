@@ -17,13 +17,13 @@ class task_motor:
     '''
     def __init__(self, motor_share):
         '''! @brief  Sets relevant pin variables for the motor.
-             @param  motor_share  Shared variable communicating duty cycle value
-             @param  ENA         Enable pin object for the motor.
-             @param  IN1A_pin    Control pin 1 associated with motor.
-             @param  IN2A_pin    Control pin 2 associated with motor.
-             @param  tim_MOT_A   Timer object for motor.
-             @param  motor       Motor object from the motor driver class.
-             @param  period      Period for task execution, in milliseconds.
+             @param  motor_share    Shared variable communicating duty cycle value
+             @param  ENA            Enable pin object for the motor.
+             @param  IN1A_pin       Control pin 1 associated with motor.
+             @param  IN2A_pin       Control pin 2 associated with motor.
+             @param  tim_MOT_A      Timer object for motor.
+             @param  motor          Motor object from the motor driver class.
+             @param  period         Period for task execution, in milliseconds.
              @param  next_time      Timing variable for tracking current time.
              @param  start_time     Timing variable tracking starting time.
         '''

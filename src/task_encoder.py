@@ -15,7 +15,7 @@ class task_encoder:
     '''! @brief     Task implementing functionality of encoder driver.
     '''
     def __init__(self, encoder_share):
-        '''! @brief      Initializes objects of the EncoderDriver class.
+        '''! @brief     Initializes objects of the EncoderDriver class.
              @param  encoder_share  Shared variable storing encoder value.
              @param  ENC1A_pin    First pin object for encoder channel.
              @param  ENC1B_pin    Second pin object for encoder channel.
@@ -27,14 +27,16 @@ class task_encoder:
         '''  
         self.encoder_share = encoder_share
         
-        # Define pin objects for encoder channels for encoder 1
+        # ENCODER SETUP VARIABLES
+        
+        # Define pin objects for encoder channels for encoder
         ENC1A_pin = pyb.Pin.cpu.B6
         ENC1B_pin = pyb.Pin.cpu.B7
-
         # Define timer objects of specified prescaler and frequency.
-        tim_ENC_A = pyb.Timer(4, prescaler = 0, period = 2**16 - 1)
+        tim_ENC_1 = pyb.Timer(4, prescaler = 0, period = 2**16 - 1)
         # Encoder object
-        self.encoder = encoder.EncoderDriver(ENC1A_pin, ENC1B_pin, tim_ENC_A)
+        self.encoder = encoder.EncoderDriver(ENC1A_pin, ENC1B_pin, tim_ENC_1)
+        
         # Timing variables
         self.period = 1
         self.next_time = 0
@@ -43,13 +45,16 @@ class task_encoder:
     def run(self):
         '''! @brief Runs the encoder driver and position to shared variable
         '''
+        # Calculate current time as the difference between now and last stamp
         self.current_time = utime.ticks_diff(utime.ticks_ms(), self.start_time)
         
-        if utime.ticks_diff(self.current_time, self.next_time) >=0:
+        if utime.ticks_diff(self.current_time, self.next_time) >= 0:
             
+            # Write encoder reading data value into encoder shared variable
             self.encoder_share.write(self.encoder.read())
 
             self.next_time = utime.ticks_add(self.current_time, self.period)
+            
     def zero(self):
         '''! @brief Zeros the encoder reading.
         '''
