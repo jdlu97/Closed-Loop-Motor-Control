@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['zero_0',['zero',['../classencoder_1_1_encoder_driver.html#a4b30fbb69546a0ef89cbe2405ba49f73',1,'encoder.EncoderDriver.zero()'],['../classtask__encoder_1_1task__encoder.html#ac36420820d881a2aad2b5792f6ac0b5c',1,'task_encoder.task_encoder.zero()']]]
+  ['write_0',['write',['../classshares_1_1_share.html#a22f177ed1c1fed8dd4a07186b1327918',1,'shares::Share']]]
 ];

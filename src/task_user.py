@@ -14,7 +14,7 @@ import serial
 import matplotlib.pyplot as plt
 import time
 
-# String variable holding the name of the serial port 
+## String variable holding the name of the serial port 
 COM_num = "COM5"       
         
 def send(command):
@@ -28,13 +28,13 @@ def read():
     data = port.readline().decode('utf-8')
                 
 if __name__ == '__main__':
-    # Boolean variable for triggering plotting of the data.
+    ## Boolean variable for triggering plotting of the data.
     print_flag = False
-    # Boolean variable that tells program whether Kp is already sent over serial.
+    ## Boolean variable that tells program whether Kp is already sent over serial.
     Kp_flag = False
-    # List of time stamps for each encoder reading value.
+    ## List of time stamps for each encoder reading value.
     time_list = []
-    # List of encoder position values in step response.
+    ## List of encoder position values in step response.
     position = []
 
     with serial.Serial(str(COM_num), 115200) as port:

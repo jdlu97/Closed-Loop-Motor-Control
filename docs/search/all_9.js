@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['send_0',['send',['../task__user_8py.html#a7ac62939ce970b5cd110e28e8f535472',1,'task_user']]],
-  ['set_5fgain_1',['set_gain',['../classcontroller_1_1controller.html#a5c3869f31e19691ec8f3b01cae53c5cd',1,'controller::controller']]],
-  ['setpoint_2',['setpoint',['../classcontroller_1_1controller.html#a1c3456e6b0f0bd77d652c90183c6c0ae',1,'controller::controller']]],
-  ['share_3',['Share',['../classshares_1_1_share.html',1,'shares']]],
-  ['shares_2epy_4',['shares.py',['../shares_8py.html',1,'']]]
+  ['read_0',['read',['../classencoder_1_1_encoder_driver.html#ade24d23ef3ddb19c6321dfd9bb66378f',1,'encoder.EncoderDriver.read()'],['../classshares_1_1_share.html#a2f6a8de164ca35bf55b68586f15d38a7',1,'shares.Share.read()'],['../task__user_8py.html#a4e668b593dcf4bb99a950ad0b26aaec3',1,'task_user.read()']]],
+  ['run_1',['run',['../classcontroller_1_1controller.html#aec8fa5830f3c357dc81a38b5532db92c',1,'controller.controller.run()'],['../classtask__controller_1_1_task_controller.html#a38fd46a79ec3d687d1ecaa9da0fc91f5',1,'task_controller.TaskController.run()'],['../classtask__encoder_1_1task__encoder.html#af3afa3a5dd98b3251d52fedb576175b1',1,'task_encoder.task_encoder.run()'],['../classtask__motor_1_1task__motor.html#a18a5066fb0464fad441c60b9dad5eee3',1,'task_motor.task_motor.run()']]]
 ];
