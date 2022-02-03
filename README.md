@@ -7,3 +7,7 @@
  
  After running several tests and tuning our system with an appropriate proportional gain Kp, we determined that gain values of 0.3 and 0.03 resulted in fast and accurate step response plots. This is shown below.
  
+ ![Step response with Kp = 0.3](https://github.com/jdlu97/Lab-2/blob/main/src/response_Kp_0.3.png?raw=true)
+ 
+ ![Step response with Kp = 0.03](https://github.com/jdlu97/Lab-2/blob/main/src/response_Kp_0.03.png?raw=true)
+ 
