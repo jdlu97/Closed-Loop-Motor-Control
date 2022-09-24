@@ -1,10 +1,13 @@
 '''!    @file       task_motor.py
+        
         @brief      This module implements a motor task for Lab 02.
         @details    Implements functionality of motor driver to set the percent
                     duty cycle of the motor given by the output of the controller.
-        @author     Cade Liberty
+        
         @author     Juan Luna
+        @author     Cade Liberty
         @author     Marcus Monroe
+        
         @date       Febraury 03, 2022
 '''
 

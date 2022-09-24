@@ -3,9 +3,10 @@
         @details    Implements a very simple interface for sharing data between
                     multiple tasks.
 
-        @author     Cade Liberty
         @author     Juan Luna
-        @author      Marcus Monroe  
+        @author     Cade Liberty
+        @author     Marcus Monroe  
+        
         @date       January 31, 2022
 '''
 

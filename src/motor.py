@@ -1,11 +1,14 @@
 '''!    @file       motor_liberty_luna_monroe.py
+        
         @brief      A driver for working with a DC motor.
         @details    Encapsulates functionality of DC motor in the form of a 
                     motor driver class. This class sets up pins to control the
                     motor and sets the duty cycle and direction of the motor. 
-        @author     Cade Liberty
+        
         @author     Juan Luna
+        @author     Cade Liberty
         @author     Marcus Monroe
+        
         @date       January 26, 2022
 '''
 

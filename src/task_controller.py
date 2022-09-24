@@ -1,10 +1,13 @@
 '''! @file    task_controller.py
+     
      @brief   Runs controller driver implementing proportional closed-loop control.  
      @details Takes encoder values and passes it through the controller driver
               to get new duty cycle.
-     @author  Cade Liberty
+     
      @author  Juan Luna
+     @author  Cade Liberty
      @author  Marcus Monroe
+     
      @date    January 31, 2022
 '''
 import utime

@@ -1,12 +1,15 @@
 '''! @file      controller.py
+
      @brief     A driver implementing proportional closed-loop control.
      @details   Computes the actuation value by multiplying the signal by the
                 proportional controller gain, Kp. The error is found by
                 calculating the difference between the setpoint (desired) value
                 and measured value.
-     @author    Cade Liberty
+
      @author    Juan Luna
+     @author    Cade Liberty
      @author    Marcus Monroe
+     
      @date      February 03, 2022
 '''
 

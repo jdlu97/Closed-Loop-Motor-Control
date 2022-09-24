@@ -1,13 +1,16 @@
 '''!    @file       encoder.py
+        
         @brief      A driver for working with a quadrature incremental encoder.
         @details    Encapsulates functionality of encoder attached to the motor.
                     This class sets up pins to control the encoder and methods
                     to read and zero (reset) the angular position of the motor
                     in units of "ticks". Position reading is based on an 
                     algorithm that accounts for overflow and underflow.
-        @author     Cade Liberty
+        
         @author     Juan Luna
+        @author     Cade Liberty
         @author     Marcus Monroe
+        
         @date       February 03, 2022
 '''
 

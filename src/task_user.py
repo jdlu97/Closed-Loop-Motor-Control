@@ -1,13 +1,16 @@
 '''!    @file       task_user.py
+        
         @brief      Implements a user interface for Lab 02.
         @details    The user interface runs on the PC and sends the proportional
                     gain value to the STM32 Nucleo microcontroller to initiate
                     the step response. Once the step response is finished, this
                     script reads and plots the resulting data, saving the 
                     current plot as a PNG image file.
+        
         @author     Juan Luna
         @author     Marcus Monroe
         @author     Cade Liberty
+        
         @date       January 30, 2022
 '''
 import serial

@@ -1,12 +1,15 @@
 '''!    @file       main.py
+        
         @brief      Main script for execution of Lab 02: Closed-Loop Motor Control.
         @details    Imports modules responsible for executing tasks implementing
                     closed-loop position control on a DC motor. Cooperative
                     multi-tasking is used to run tasks sequentially and share
                     resources. 
-        @author     Cade Liberty
+
         @author     Juan Luna
+        @author     Cade Liberty
         @author     Marcus Monroe
+        
         @date       Febraury 03, 2022
 '''
 
