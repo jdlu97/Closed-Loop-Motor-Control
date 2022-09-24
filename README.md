@@ -8,10 +8,10 @@
  
  DC motors with closed-loop control systems provide some of the fastest, most efficient, and most accurate systems available for moving things to specified positions. A motor with closed-loop control is often referred to as a servo system. If you have a motor, motor driver and position sensor just lying around, you can write code to operate the motor in closed-loop position servo mode. One algorithm is the proportional controller.
 
-    - Supply as an input the setpoint, the desired location of the motor.
-	- Subtract the measured location of the motor from the setpoint; the difference is the error signal, a signed number indicating which way the motor is off and how far.
-	- Multiply the error signal by *a* control gain called KP to produce a result called the actuation signal. The larger the error, the larger the actuation, so the harder the controller will push.
-	- Send the actuation signal to the motor driver which you have already written to control the magnitude and direction of motor torque.
+ - Supply as an input the setpoint, the desired location of the motor.
+ - Subtract the measured location of the motor from the setpoint; the difference is the error signal, a signed number indicating which way the motor is off and how far.
+ - Multiply the error signal by *a* control gain called KP to produce a result called the actuation signal. The larger the error, the larger the actuation, so the harder the controller will push.
+ - Send the actuation signal to the motor driver which you have already written to control the magnitude and direction of motor torque.
 	
  The controller can be enhanced, although this is case specific, by adding other terms based on the time integral and time derivative of the error, or even full state feedback using the position and velocity to compute the actuation, but those methods were not considered at this time due to the scope of the project.
  
@@ -32,13 +32,13 @@
  After running several tests and tuning the system with an appropriate proportional gains, gain values of 0.3 and 0.03 resulted in fast and fairly accurate step response plots. This is shown below (**Figure 1-2**).
  
  
-	![Step response with Kp = 0.3](https://github.com/jdlu97/Lab-2/blob/main/src/response_Kp_0.3.png?raw=true)
+![Step response with Kp = 0.3](https://github.com/jdlu97/Lab-2/blob/main/src/response_Kp_0.3.png?raw=true)
  
-	**Figure 1:** Motor step response with a proportional gain value of **Kp = 0.3**.
+**Figure 1:** Motor step response with a proportional gain value of **Kp = 0.3**.
  
-	![Step response with Kp = 0.03](https://github.com/jdlu97/Lab-2/blob/main/src/response_Kp_0.03.png?raw=true)
+![Step response with Kp = 0.03](https://github.com/jdlu97/Lab-2/blob/main/src/response_Kp_0.03.png?raw=true)
  
-	**Figure 2:** Motor step response with a proportional gain value of **Kp = 0.03**.
+**Figure 2:** Motor step response with a proportional gain value of **Kp = 0.03**.
  
  
  As we can see from the plots, it takes less than one second for the response to approach steady state. For a gain value of 0.3, some oscillation in the response is observed as it settles at around 600 ms. In the second plot, a gain value 10 times smaller produces a faster response and no oscilation. For a gain value of 0.03, we can see that steady state is reached at around 400 ms.
