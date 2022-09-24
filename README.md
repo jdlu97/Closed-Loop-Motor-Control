@@ -31,15 +31,15 @@
  
  After running several tests and tuning the system with an appropriate proportional gains, gain values of 0.3 and 0.03 resulted in fast and fairly accurate step response plots. This is shown below (**Figure 1-2**).
  
- <p align = "center">
- ![Step response with Kp = 0.3](https://github.com/jdlu97/Lab-2/blob/main/src/response_Kp_0.3.png?raw=true)
  
- **Figure 1:** Motor step response with a proportional gain value of **Kp = 0.3**.
+	![Step response with Kp = 0.3](https://github.com/jdlu97/Lab-2/blob/main/src/response_Kp_0.3.png?raw=true)
  
- ![Step response with Kp = 0.03](https://github.com/jdlu97/Lab-2/blob/main/src/response_Kp_0.03.png?raw=true)
+	**Figure 1:** Motor step response with a proportional gain value of **Kp = 0.3**.
  
- **Figure 2:** Motor step response with a proportional gain value of **Kp = 0.03**.
- </p>
+	![Step response with Kp = 0.03](https://github.com/jdlu97/Lab-2/blob/main/src/response_Kp_0.03.png?raw=true)
+ 
+	**Figure 2:** Motor step response with a proportional gain value of **Kp = 0.03**.
+ 
  
  As we can see from the plots, it takes less than one second for the response to approach steady state. For a gain value of 0.3, some oscillation in the response is observed as it settles at around 600 ms. In the second plot, a gain value 10 times smaller produces a faster response and no oscilation. For a gain value of 0.03, we can see that steady state is reached at around 400 ms.
  
