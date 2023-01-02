@@ -1,16 +1,14 @@
 '''!    @file       main.py
         
-        @brief      Main script for execution of Lab 02: Closed-Loop Motor Control.
+        @brief      Main script for execution of Project 0x12: Closed-Loop Motor Control.
         @details    Imports modules responsible for executing tasks implementing
                     closed-loop position control on a DC motor. Cooperative
                     multi-tasking is used to run tasks sequentially and share
                     resources. 
 
         @author     Juan Luna
-        @author     Cade Liberty
-        @author     Marcus Monroe
-        
-        @date       Febraury 03, 2022
+        @date       2022-02-03 Original file
+        @date       2022-12-30 Modified for portfolio update
 '''
 
 import task_controller
@@ -26,9 +24,9 @@ if __name__ == '__main__':
     gain_share = shares.Share(0)
     
     # Tasks to run the controller, motor, and encoder scripts
-    task_ctrl = task_controller.TaskController(encoder_share, motor_share, gain_share)
-    task_mot  = task_motor.task_motor(motor_share)
-    task_enc  = task_encoder.task_encoder(encoder_share)
+    task_ctrl = task_controller.Task_Controller(encoder_share, motor_share, gain_share)
+    task_mot  = task_motor.Task_Motor(motor_share)
+    task_enc  = task_encoder.Task_Encoder(encoder_share)
     
     # Define a Boolean variable that tells when an input has been given
     key_press = True

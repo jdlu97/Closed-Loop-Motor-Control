@@ -4,10 +4,8 @@
                     multiple tasks.
 
         @author     Juan Luna
-        @author     Cade Liberty
-        @author     Marcus Monroe  
-        
-        @date       January 31, 2022
+        @date       2022-01-31 Original file
+        @date       2022-12-30 Modified for portfolio update
 '''
 
 class Share:

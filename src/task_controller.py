@@ -1,20 +1,18 @@
-'''! @file    task_controller.py
+'''! @file      task_controller.py
      
-     @brief   Runs controller driver implementing proportional closed-loop control.  
-     @details Takes encoder values and passes it through the controller driver
-              to get new duty cycle.
+     @brief     Runs controller driver implementing proportional control.  
+     @details   Takes encoder values and passes it through the controller driver
+                to get new duty cycle.
      
-     @author  Juan Luna
-     @author  Cade Liberty
-     @author  Marcus Monroe
-     
-     @date    January 31, 2022
+     @author    Juan Luna
+     @date      2022-01-31 Original file
+     @date      2022-12-30 Modified for portfolio update
 '''
 import utime
 import controller
 import array
 
-class TaskController:
+class Task_Controller:
      '''! @brief    Task implementing controller functionality to perform
                     closed loop control on motor.
      '''
@@ -39,7 +37,7 @@ class TaskController:
          self.gain_share = gain_share
         
          # Controller object
-         self.controller = controller.controller(16384, gain_share)
+         self.controller = controller.Controller(16384, gain_share)
         
          # Timing variables
          self.period = 5

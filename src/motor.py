@@ -1,4 +1,4 @@
-'''!    @file       motor_liberty_luna_monroe.py
+'''!    @file       motor.py
         
         @brief      A driver for working with a DC motor.
         @details    Encapsulates functionality of DC motor in the form of a 
@@ -6,16 +6,14 @@
                     motor and sets the duty cycle and direction of the motor. 
         
         @author     Juan Luna
-        @author     Cade Liberty
-        @author     Marcus Monroe
-        
-        @date       January 26, 2022
+        @date       2022-01-26 Original file
+        @date       2022-12-30 Modified for portfolio update
 '''
 
 import pyb
 #import utime
 
-class MotorDriver:
+class Motor_Driver:
     '''! @brief      A motor driver class for the L6206 motor driver.
          @details    Objects of this class can be used to instantiate motor
                      driver objects to control two DC motors.

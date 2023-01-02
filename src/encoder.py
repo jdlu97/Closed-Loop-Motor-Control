@@ -7,17 +7,15 @@
                     in units of "ticks". Position reading is based on an 
                     algorithm that accounts for overflow and underflow.
         
-        @author     Juan Luna
-        @author     Cade Liberty
-        @author     Marcus Monroe
-        
-        @date       February 03, 2022
+        @author   Juan Luna
+        @date     2022-02-03 Original file
+        @date     2022-12-30 Modified for portfolio update
 '''
 
 import pyb
 #import utime
 
-class EncoderDriver:
+class Encoder_Driver:
     '''! @brief      Driver class for the quadrature incremental encoder.
          @details    Objects of this class can be used to instantiate encoder
                      objects to control two encoders, each attach to one motor.

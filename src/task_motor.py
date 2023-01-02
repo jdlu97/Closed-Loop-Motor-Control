@@ -1,6 +1,6 @@
 '''!    @file       task_motor.py
         
-        @brief      This module implements a motor task for Lab 02.
+        @brief      This module implements a motor task for Project 0x12.
         @details    Implements functionality of motor driver to set the percent
                     duty cycle of the motor given by the output of the controller.
         
@@ -15,7 +15,7 @@ import utime
 import pyb
 import motor
 
-class task_motor:
+class Task_Motor:
     '''! @brief     Task implementing functionality of motor driver.
     '''
     def __init__(self, motor_share):
@@ -40,7 +40,7 @@ class task_motor:
         # Define timer object for motor with 20-kHz frequency.
         tim_MOT_A = pyb.Timer(3, freq=20000)
         # Motor object
-        self.motor = motor.MotorDriver(ENA, IN1A_pin, IN2A_pin, tim_MOT_A)
+        self.motor = motor.Motor_Driver(ENA, IN1A_pin, IN2A_pin, tim_MOT_A)
         # Timing variables
         self.period = 5
         self.next_time = 0

@@ -1,20 +1,18 @@
-'''!    @file    task_encoder.py
+'''!    @file       task_encoder.py
         
-        @brief   Runs the encoder driver to receive current encoder position
-        @details Establishes encoder pin values and runs encoder frequently 
-                 to provide measured values to closed loop gain.
+        @brief      Runs the encoder driver to receive current encoder position
+        @details    Establishes encoder pin values and runs encoder frequently 
+                    to provide measured values to closed loop gain.
         
-        @author  Juan Luna
-        @author  Cade Liberty
-        @author  Marcus Monroe
-        
-        @date    January 31, 2022
+        @author     Juan Luna
+        @date       2022-01-31 Original file
+        @date       2022-12-30 Modified for portfolio update
 '''
 import utime
 import pyb
 import encoder
 
-class task_encoder:
+class Task_Encoder:
     '''! @brief     Task implementing functionality of encoder driver.
     '''
     def __init__(self, encoder_share):
@@ -38,7 +36,7 @@ class task_encoder:
         # Define timer objects of specified prescaler and frequency.
         tim_ENC_1 = pyb.Timer(4, prescaler = 0, period = 2**16 - 1)
         # Encoder object
-        self.encoder = encoder.EncoderDriver(ENC1A_pin, ENC1B_pin, tim_ENC_1)
+        self.encoder = encoder.Encoder_Driver(ENC1A_pin, ENC1B_pin, tim_ENC_1)
         
         # Timing variables
         self.period = 1

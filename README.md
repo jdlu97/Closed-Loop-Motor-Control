@@ -42,8 +42,3 @@
  
  
  As we can see from the plots, it takes less than one second for the response to approach steady state. For a gain value of 0.3, some oscillation in the response is observed as it settles at around 600 ms. In the second plot, a gain value 10 times smaller produces a faster response and no oscilation. For a gain value of 0.03, we can see that steady state is reached at around 400 ms.
- 
-  
- 
- 
- *The source code of this repository and its documentation were originally developed for Lab 2 of the Mechatronics course at California Polytechnic State University.*
