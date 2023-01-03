@@ -1,8 +1,8 @@
 # Closed-Loop Motor Control
  
- Source code and documentation of firmware that shows ***closed-loop position control*** on a DC motor using proportional control and code that interfaces the functionality of an encoder driver, motor driver, and a controller using cooperative multi-tasking. Specifically, the source code as a whole runs a closed-loop step response in which the setpoint or desired value is one complete revolution of the motor. See details in the following sections.
+ Source code and documentation of firmware that shows closed-loop position control on a DC motor using proportional control and code that interfaces the functionality of an encoder driver, motor driver, and a controller using cooperative multi-tasking. Specifically, the source code as a whole runs a closed-loop step response in which the setpoint or desired value is one complete revolution of the motor. See details in the following sections.
  
- The encoder and motor driver base files were extracted from the [Drivers-for-Motor-Control](https://github.com/jdlu97/Drivers-for-Motor-Control) repository.
+ The encoder and motor driver base files were adapted from the [Drivers-for-Motor-Control](https://github.com/jdlu97/Drivers-for-Motor-Control) repository.
  
  ## Background
  
@@ -10,7 +10,7 @@
 
  - Supply as an input the setpoint, the desired location of the motor.
  - Subtract the measured location of the motor from the setpoint; the difference is the error signal, a signed number indicating which way the motor is off and how far.
- - Multiply the error signal by *a* control gain called KP to produce a result called the actuation signal. The larger the error, the larger the actuation, so the harder the controller will push.
+ - Multiply the error signal by a control gain called KP to produce a result called the actuation signal. The larger the error, the larger the actuation, so the harder the controller will push.
  - Send the actuation signal to the motor driver which you have already written to control the magnitude and direction of motor torque.
 	
  The controller can be enhanced, although this is case specific, by adding other terms based on the time integral and time derivative of the error, or even full state feedback using the position and velocity to compute the actuation, but those methods were not considered at this time due to the scope of the project.
@@ -29,16 +29,17 @@
  
  In the trials, after adjusting the controller gain value, the motor took less than a second to do one complete revolution. For clarification, a small disk with markings was mounted on the shaft of the motor to visually monitor the rotation of the motor.
  
- After running several tests and tuning the system with an appropriate proportional gains, gain values of 0.3 and 0.03 resulted in fast and fairly accurate step response plots. This is shown below (**Figure 1-2**).
+ After running several tests and tuning the system with an appropriate proportional gains, gain values of 0.3 and 0.03 resulted in fast and fairly accurate step response plots. This is shown below:
  
  
-![Step response with Kp = 0.3](https://github.com/jdlu97/Lab-2/blob/main/src/response_Kp_0.3.png?raw=true)
+![Step response with Kp = 0.3](https://github.com/jdlu97/Closed-Loop-Motor-Control/blob/main/img/step_response_kp_0.3.png?raw=true)
  
-**Figure 1:** Motor step response with a proportional gain value of **Kp = 0.3**.
+ <p align="center">Motor step response with a proportional gain value of **Kp = 0.3**.</p>
  
-![Step response with Kp = 0.03](https://github.com/jdlu97/Lab-2/blob/main/src/response_Kp_0.03.png?raw=true)
+ <br/>
  
-**Figure 2:** Motor step response with a proportional gain value of **Kp = 0.03**.
+![Step response with Kp = 0.03](https://github.com/jdlu97/Closed-Loop-Motor-Control/blob/main/img/step_response_kp_0.03.png?raw=true)
  
+<p align="center"> Motor step response with a proportional gain value of **Kp = 0.03**.</p>
  
- As we can see from the plots, it takes less than one second for the response to approach steady state. For a gain value of 0.3, some oscillation in the response is observed as it settles at around 600 ms. In the second plot, a gain value 10 times smaller produces a faster response and no oscilation. For a gain value of 0.03, we can see that steady state is reached at around 400 ms.
+ As we see from the plots, it takes less than one second for the response to approach steady state. For a gain value of 0.3, some oscillation in the response is observed as it settles at around 600 ms. In the second plot, a gain value 10 times smaller produces a faster response and no oscilation. For a gain value of 0.03, we can see that steady state is reached at around 400 ms.
